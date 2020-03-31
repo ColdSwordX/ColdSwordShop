@@ -1,4 +1,5 @@
 ﻿body {
+    background-color: antiquewhite;
 }
 /*add a black background color to the navigation bar.*/
 .topnav {
@@ -9,11 +10,11 @@
     /*Add some flair to the navigation icons.*/
     .topnav a {
         float: left;
-        color: forestgreen;
+        color: black;
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
-        font-size: 17px;
+        font-size: 22px;
     }
         /*Change the color of the icons when its hovered over.*/
         .topnav a:hover {

@@ -3,15 +3,18 @@
 <!DOCTYPE html>
 <html>
 <head runat="server">
-    <link rel="stylesheet" href="MainStyle.css"/>
-    <title></title>
+    <link rel="stylesheet" href="WebshopStyle.css"/>
+    <title>ColdSword's Webshop</title>
 </head>
     <body>
         <form id="form1" runat="server">
-            <div>
-               
-                <h1> T H E _ A W E S O M E _ S I T E </h1>
-              
+             <%-- Navigation menu --%>
+            <div class="topnav">
+                <a class="active" href="MainPage.aspx">Home</a>
+                <a href="MainPage.aspx">Logout</a>
+                <a href="MainPage.aspx">User Info</a>
+                <a style="position:absolute; right:160px;" id ="CreateNew" runat="server" visible="false" href="MainPage.aspx">Create User</a>
+                <a style="position:absolute; right:280px;" id ="Delete" runat="server" visible="false" href="MainPage.aspx">Delete User</a>
             </div>
         </form>
     </body>

@@ -72,7 +72,7 @@
       <DependentUpon>ColdSwordShopDB.mdf</DependentUpon>
     </Content>
     <Content Include="MainPage.aspx" />
-    <Content Include="MainStyle.css" />
+    <Content Include="WebshopStyle.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
