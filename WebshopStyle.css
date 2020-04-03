@@ -1,37 +1,54 @@
 ﻿body {
     background-color: antiquewhite;
 }
-/*add a black background color to the navigation bar.*/
-.topnav {
-    position: relative;
-    background-color: blue;
+/*Ued to designate the style of the navigation bar*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
     overflow: hidden;
+    background-color: black;
 }
-    /*Add some flair to the navigation icons.*/
-    .topnav a {
-        float: left;
-        color: black;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 22px;
-    }
-        /*Change the color of the icons when its hovered over.*/
-        .topnav a:hover {
-            background-color: orange;
-            color: darkblue;
-        }
-    /*Change the color of the icon to the one that the user i currently on.*/
-    .topnav:active {
-        background-color: black;
+/*User to place the navigation bar*/
+li {
+    float: left;
+}
+    li a, .dropbtn {
+        display: inline-block;
         color: white;
-    }
-    /*Places the text on the right side of the navigation bar.*/
-    .topnav b {
-        float: left;
-        color: forestgreen;
-        text-align: center;
+        text-align: left;
         padding: 14px 16px;
         text-decoration: none;
-        font-size: 17px;
     }
+        /*Used to Color what is hovered over in the navigation bar.*/
+        li a:hover, .dropdown:hover .dropbtn {
+            background-color: red;
+        }
+    li.dropdown {
+        display: inline-block;
+    }
+/*Design of the dropdown "list" from color to size.*/
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+    /*Design of the items on the dropdown list. */
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+        /*changes the color of the dropdown item when hovered over.*/
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
