@@ -38,7 +38,7 @@
                      <%-- Makes a text field where the user can enter the passweord for the given user. --%>
                      <input runat="server" type="password" id="password" name="password"/><br/><br/>
                      <%-- Creates the button that is used to submit the information and trigger the OnClick method. --%>
-                     <asp:Button ID="loginButton" runat="server" Text="Login" ></asp:Button><br/><br/>
+                     <asp:Button ID="loginButton" runat="server" Text="Login" OnClick="Clicked"></asp:Button><br/><br/>
                      <%-- Display information if the username or the password were wrong. --%>
                      <label runat="server" id="errorfield"> Incorect Username or Password</label><br/> 
                  </div>

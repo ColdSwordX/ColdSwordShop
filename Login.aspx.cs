@@ -39,7 +39,7 @@ namespace ColdSwordShop
             if (InformationClass.LoginId > 0)//Sends the user to the diffrent page if they exists in the database.
             {
                 //funder ud af om brugen der er loget ind er en admin eller ej.
-                cmdstr = "select Admin from login where Id = " + InformationClass.LoginId;
+                cmdstr = "select Administrator from login where Id = " + InformationClass.LoginId;
                 command = new SqlCommand(cmdstr, conn);
                 SqlDataReader reader = command.ExecuteReader();
                 //så længe der er noget i reader en.
@@ -49,7 +49,7 @@ namespace ColdSwordShop
                 }
                 try
                 {
-                    if (reader["Admin"] as int? == 1)
+                    if (reader["Administrator"] as int? == 1)
                     {
                         InformationClass.IsAdmin = true;
                     }
@@ -65,7 +65,7 @@ namespace ColdSwordShop
                 }
                 reader.Close();//close the reader.
                 DBConnetorClose();//close the connection.
-                Response.Redirect("UserInfo.aspx");
+                Response.Redirect("Home.aspx");
             }
             else
             {

@@ -11,7 +11,7 @@ namespace ColdSwordShop
         static private int ID;
         static private bool admin;
         static private bool edit;
-        static private string conn = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=Z:\Webtest\loginsystem\App_Data\loginDB.mdf;Integrated Security = True";
+        static private string conn = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ColdSword\source\repos\CodlSwordShop\ColdSwordShop\App_Data\ColdSwordShopDB.mdf;Integrated Security=True";
         static private bool delete;
         static public bool Delete
         {
