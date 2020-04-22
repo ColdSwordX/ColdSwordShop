@@ -9,7 +9,7 @@ ul {
     overflow: hidden;
     background-color: black;
 }
-/*User to place the navigation bar*/
+/*Used to place the navigation bar*/
 li {
     float: left;
 }
@@ -22,7 +22,7 @@ li {
     }
         /*Used to Color what is hovered over in the navigation bar.*/
         li a:hover, .dropdown:hover .dropbtn {
-            background-color: red;
+            background-color: black;
         }
     li.dropdown {
         display: inline-block;
@@ -46,9 +46,67 @@ li {
     }
         /*changes the color of the dropdown item when hovered over.*/
         .dropdown-content a:hover {
-            background-color: #f1f1f1;
+            background-color: red;
         }
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+/*Side NAvigation bar*/
+.sidenav {
+    height: 100%;
+    width: 150px;
+    position: fixed;
+    z-index: 1;
+    top: 150px;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+    border-width:2px;
+    border-color:white;
+}
+
+    .sidenav a {
+        padding: 6px 6px 6px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+    }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+.main {
+    margin-left: 150px; /* 100 more then the width of the sidenav */
+    margin-top: 100px; /* 100px from the top of the screen */
+    height: 100%;
+    width: 1200px;
+}
+    .main a {
+        position: relative;
+        left: 0;
+        outline: #4CAF50 solid 10px;
+    }
+    .main b {
+        position: absolute;
+        right: 10%;
+        outline: #4CAF50 solid 10px;
+    }
+/*The style of the login "screen".*/
+.centerLoginField {
+    position: absolute;
+    left: 38%;
+    top: 33%;
+    width: 300px;
+    text-align: center;
+    background-color: black;
+    border: 3px solid #0025d3;
+}
+/*Sets the header on the "screen" to be a bit bigger.*/
+.largerFont {
+    color: forestgreen;
+    font-size: larger;
 }

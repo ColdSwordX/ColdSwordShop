@@ -8,22 +8,29 @@
 </head>
     <body>
         <form id="form1" runat="server">
-             <%-- Navigation menu --%>
+             <%-- Top Navigation menu --%>
             <ul>
-                <li><a href="Home.aspx">Home</a></li>
-                <li><a href="Home.aspx">News</a></li>
-                <li class="dropdown">
-                    <a href="Home.aspx" class="dropbtn">Dropdown</a>
-                    <div class="dropdown-content">
-                        <a href="Home.aspx">Link 1</a>
-                        <a href="Home.aspx">Link 2</a>
-                        <a href="Home.aspx">Link 3</a>
-                    </div>
-                </li>
-                 <%-- Displays what page you are on in the right top side of the nav bar --%>
+                <%-- Shop Name --%>
+                <li><a>ColdSword Shop </a></li>
+                
+                 <%--Displays what page you are on in the right top side of the nav bar--%>
                 <li><a style="position:absolute; right:0;">Home</a></li>
             </ul>
+            <%-- Side Navigation bar --%>
+            <div class="sidenav">
+                <a href="Home.aspx">Home</a>
+                <a href="#">Services</a>
+                <a href="#">Clients</a>
+                <a href="Login.aspx">Login</a>
+            </div>
+            <%-- Main Page --%>
+            <div class="main">
+                <a>AAAAAAAAAAAAaaaaaaaaaaaaaaaaaaa</a>
+                <b>BBBBBBBBBBBbbbbbbbbbbbbbbbbbbB</b>
 
+                
+                <p>This sidenav is always shown.</p>
+            </div>
         </form>
     </body>
 </html>
