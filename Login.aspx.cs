@@ -15,10 +15,6 @@ namespace ColdSwordShop
         SqlCommand command;
         protected void Page_Load(object sender, EventArgs e)
         {
-            //Sets all the staticClass balues to default settings.
-            InformationClass.LoginId = 0;
-            InformationClass.IsAdmin = false;
-            InformationClass.EditThis = false;
         }
         protected void Clicked(object sender, EventArgs e)//Trikker on the Onclicked from Html.
         {
@@ -73,6 +69,10 @@ namespace ColdSwordShop
                 // user doesn't exists.
             }
             DBConnetorClose();//close the connection.
+        }
+        protected void CreateUserButton(object sender, EventArgs e)
+        {
+            Response.Redirect("CreateUser.aspx");
         }
         private void ChangeState(IDataRecord record)
         {
