@@ -1,5 +1,4 @@
-﻿
-drop table Inventory
+﻿drop table Inventory
 drop table ItemCatagory
 drop table Basket
 drop table CheckOut
@@ -8,7 +7,7 @@ drop table login
 go
 Create Table Login(
 	ID int Identity(1,1) primary key,
-	Usernane  char(255) not null,
+	Username  char(255) not null,
 	Pass  char(255) not null,
 	Administrator int default 0
 );
@@ -46,7 +45,7 @@ Create Table CheckOut(
 	PersonID int foreign key references PersonInformation(ID)
 );
 go
-insert into Login (Usernane, Pass, Administrator)
+insert into Login (Username, Pass, Administrator)
 values ('jens' , '123', 1 );
 insert into PersonInformation (PIID, Fname, Lname, Email, Phone, PostalCode, City, Street, StreetNR)
 values (1 , 'Jens Anker', 'Bruun de Neergaard', 'Jens@jens.com',12345678, '45612', 'Sønderborg','Damgade', 123);
@@ -58,7 +57,9 @@ insert into Inventory
 values('Strabarry','100' ,'Nice cake with strabarry', 1);
 insert into Inventory
 values ('1 size bed', '1500', 'Bed for 1 person', 2);
+go
 select * from Login
 select * from PersonInformation
 select * from ItemCatagory
 select * from Inventory
+select ID from Login where Username = 'jens' and Pass = '123'

@@ -14,13 +14,13 @@
                 <li><a>ColdSword Shop </a></li>
                 
                  <%--Displays what page you are on in the right top side of the nav bar--%>
-                <li><a style="position:absolute; right:0;">Home</a></li>
+                <li><a style="position:absolute; right:10px;">Home</a></li>
             </ul>
             <%-- Side Navigation bar --%>
             <div class="sidenav">
                 <a href="Home.aspx">Home</a>
-                <a href="#">Services</a>
-                <a href="#">Clients</a>
+                <a href="ShopPage.aspx">Shop</a>
+                <a href="#">Somthing</a>
                 <a href="Login.aspx">Login</a>
             </div>
             <%-- Main Page --%>

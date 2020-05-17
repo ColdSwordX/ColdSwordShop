@@ -75,6 +75,7 @@
     <Content Include="Home.aspx" />
     <Content Include="Login Page.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="ShopPage.aspx" />
     <Content Include="WebshopStyle.css" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -109,6 +110,13 @@
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShopPage.aspx.cs">
+      <DependentUpon>ShopPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShopPage.aspx.designer.cs">
+      <DependentUpon>ShopPage.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

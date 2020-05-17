@@ -13,36 +13,36 @@
             <li><a>ColdSword Shop </a></li>
                 
             <%--Displays what page you are on in the right top side of the nav bar--%>
-            <li><a style="position:absolute; right:0;">Login</a></li>
+            <li><a style="position:absolute; right:10px; ">Login</a></li>
             </ul>
             <%-- Side Navigation bar --%>
             <div class="sidenav">
                 <a href="Home.aspx">Home</a>
-                <a href="#">Services</a>
-                <a href="#">Clients</a>
+                <a href="ShopPage.aspx">Shop</a>
+                <a href="#">Somthing</a>
                 <a href="Login.aspx">Login</a>
             </div>
-            <div class="centerLoginField">
+            <div class="centerCreateField">
                 <label>Create User</label><br /><br />
-                <Label ID="CUserName" runat="server">User Name:</Label>
+                <Label ID="CUserNameLabel" runat="server">User Name:</Label>
                 <input runat="server" type="text" id="CreateUserName" name="CreateUserName"/><br /><br />
-                <Label ID="CPassword" runat="server">Password:</Label>
+                <Label ID="CPasswordLabel" runat="server">Password:</Label>
                 <input runat="server" type="text" id="CreatePassword" name="CreatePassword"/><br /><br />
-                <Label ID="CFirstName" runat="server">First Name</Label>
+                <Label ID="CFirstNameLabel" runat="server">First Name</Label>
                 <input runat="server" type="text" id="CreateFName" name="CreateFName"/><br /><br />
-                <Label ID="CLastName" runat="server">Last Name:</Label>
+                <Label ID="CLastNameLabel" runat="server">Last Name:</Label>
                 <input runat="server" type="text" id="CreateLName" name="CreateLName"/><br /><br />
-                <Label ID="CEmail" runat="server">Email Adress:</Label>
+                <Label ID="CEmailLabel" runat="server">Email Adress:</Label>
                 <input runat="server" type="text" id="CreateEmail" name="CreateEmail"/><br /><br />
-                <Label ID="CPhone" runat="server">Phone Nymber:</Label>
+                <Label ID="CPhoneLabel" runat="server">Phone Nymber:</Label>
                 <input runat="server" type="text" id="CreatePhone" name="CreatePhone"/><br /><br />
-                <Label ID="CPostalCode" runat="server">PostalCode:</Label>
+                <Label ID="CPostalCodeLabel" runat="server">PostalCode:</Label>
                 <input runat="server" type="text" id="CreatePostalCode" name="CreatePostalCode"/><br /><br />
-                <Label ID="CCity" runat="server">City:</Label>
+                <Label ID="CCityLabel" runat="server">City:</Label>
                 <input runat="server" type="text" id="CreateCity" name="CreateCity"/><br /><br />
-                <Label ID="CStreetName" runat="server">Street Name:</Label>
+                <Label ID="CStreetNameLabel" runat="server">Street Name:</Label>
                 <input runat="server" type="text" id="CreateStreet" name="CreateStreet"/><br /><br />
-                <Label ID="CStreetNumber" runat="server">Street Number:</Label>
+                <Label ID="CStreetNumberLabel" runat="server">Street Number:</Label>
                 <input runat="server" type="text" id="CreateStreetNR" name="CreateStreetNR"/><br /><br />
                 <asp:Button ID="CreateUserButton" runat="server" Text="Create" OnClick="NewUserButton" />
             </div>

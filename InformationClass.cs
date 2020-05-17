@@ -13,6 +13,11 @@ namespace ColdSwordShop
         static private bool edit;
         static private string conn = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\ColdSword\source\repos\CodlSwordShop\ColdSwordShop\App_Data\ColdSwordShopDB.mdf;Integrated Security=True";
         static private bool delete;
+        static private string username;
+        static public string Username {
+            get { return username; }
+            set { username = value; }
+        }
         static public bool Delete
         {
 

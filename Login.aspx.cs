@@ -6,21 +6,32 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Data;
+using System.Xml;
 
 namespace ColdSwordShop
 {
     public partial class Login : System.Web.UI.Page
     {
         SqlConnection conn = new SqlConnection();
+        string cmdstr;
         SqlCommand command;
         protected void Page_Load(object sender, EventArgs e)
         {
+            //DBConnetorOpen();
+            //cmdstr = "Select * from Login";
+            //command = new SqlCommand(cmdstr, conn);
+            //SqlDataReader reader = command.ExecuteReader();
+            //while (reader.Read())
+            //{
+            //    ChangeState((IDataRecord)reader);
+            //}
+            //DBConnetorClose();
         }
         protected void Clicked(object sender, EventArgs e)//Trikker on the Onclicked from Html.
         {
             DBConnetorOpen();//open the connection.
             //Gets the desired infomation from the database.
-            string cmdstr = "Select id from login where Username='" + username.Value + "' and Password='" + password.Value + "'";
+            cmdstr = "Select ID from Login where Username = '" + username.Value + "' and Pass = '" + password.Value + "'";
             command = new SqlCommand(cmdstr, conn);
             try
             {
@@ -35,7 +46,7 @@ namespace ColdSwordShop
             if (InformationClass.LoginId > 0)//Sends the user to the diffrent page if they exists in the database.
             {
                 //funder ud af om brugen der er loget ind er en admin eller ej.
-                cmdstr = "select Administrator from login where Id = " + InformationClass.LoginId;
+                cmdstr = "select Administrator from login where ID = " + InformationClass.LoginId;
                 command = new SqlCommand(cmdstr, conn);
                 SqlDataReader reader = command.ExecuteReader();
                 //så længe der er noget i reader en.

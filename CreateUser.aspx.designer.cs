@@ -24,13 +24,13 @@ namespace ColdSwordShop
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// CUserName control.
+        /// CUserNameLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl CUserName;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl CUserNameLabel;
 
         /// <summary>
         /// CreateUserName control.
@@ -42,13 +42,13 @@ namespace ColdSwordShop
         protected global::System.Web.UI.HtmlControls.HtmlInputText CreateUserName;
 
         /// <summary>
-        /// CPassword control.
+        /// CPasswordLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl CPassword;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl CPasswordLabel;
 
         /// <summary>
         /// CreatePassword control.
@@ -60,13 +60,13 @@ namespace ColdSwordShop
         protected global::System.Web.UI.HtmlControls.HtmlInputText CreatePassword;
 
         /// <summary>
-        /// CFirstName control.
+        /// CFirstNameLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl CFirstName;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl CFirstNameLabel;
 
         /// <summary>
         /// CreateFName control.
@@ -78,13 +78,13 @@ namespace ColdSwordShop
         protected global::System.Web.UI.HtmlControls.HtmlInputText CreateFName;
 
         /// <summary>
-        /// CLastName control.
+        /// CLastNameLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl CLastName;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl CLastNameLabel;
 
         /// <summary>
         /// CreateLName control.
@@ -96,13 +96,13 @@ namespace ColdSwordShop
         protected global::System.Web.UI.HtmlControls.HtmlInputText CreateLName;
 
         /// <summary>
-        /// CEmail control.
+        /// CEmailLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl CEmail;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl CEmailLabel;
 
         /// <summary>
         /// CreateEmail control.
@@ -114,13 +114,13 @@ namespace ColdSwordShop
         protected global::System.Web.UI.HtmlControls.HtmlInputText CreateEmail;
 
         /// <summary>
-        /// CPhone control.
+        /// CPhoneLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl CPhone;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl CPhoneLabel;
 
         /// <summary>
         /// CreatePhone control.
@@ -132,13 +132,13 @@ namespace ColdSwordShop
         protected global::System.Web.UI.HtmlControls.HtmlInputText CreatePhone;
 
         /// <summary>
-        /// CPostalCode control.
+        /// CPostalCodeLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl CPostalCode;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl CPostalCodeLabel;
 
         /// <summary>
         /// CreatePostalCode control.
@@ -150,13 +150,13 @@ namespace ColdSwordShop
         protected global::System.Web.UI.HtmlControls.HtmlInputText CreatePostalCode;
 
         /// <summary>
-        /// CCity control.
+        /// CCityLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl CCity;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl CCityLabel;
 
         /// <summary>
         /// CreateCity control.
@@ -168,13 +168,13 @@ namespace ColdSwordShop
         protected global::System.Web.UI.HtmlControls.HtmlInputText CreateCity;
 
         /// <summary>
-        /// CStreetName control.
+        /// CStreetNameLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl CStreetName;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl CStreetNameLabel;
 
         /// <summary>
         /// CreateStreet control.
@@ -186,13 +186,13 @@ namespace ColdSwordShop
         protected global::System.Web.UI.HtmlControls.HtmlInputText CreateStreet;
 
         /// <summary>
-        /// CStreetNumber control.
+        /// CStreetNumberLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl CStreetNumber;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl CStreetNumberLabel;
 
         /// <summary>
         /// CreateStreetNR control.

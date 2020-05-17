@@ -13,6 +13,10 @@ ul {
 li {
     float: left;
 }
+    li b {
+        position: absolute;
+        right: 10px;
+    }
     li a, .dropbtn {
         display: inline-block;
         color: white;
@@ -86,13 +90,15 @@ li {
     width: 1200px;
 }
     .main a {
-        position: relative;
-        left: 0;
+        position: absolute;
+        top: 20%;
+        left: 200px;
         outline: #4CAF50 solid 10px;
     }
     .main b {
         position: absolute;
-        right: 10%;
+        top: 20%;
+        right: 15%;
         outline: #4CAF50 solid 10px;
     }
 /*The style of the login "screen".*/
@@ -103,10 +109,21 @@ li {
     width: 300px;
     text-align: center;
 }
+.centerCreateField {
+    position: absolute;
+    left: 38%;
+    top: 20%;
+    width: 300px;
+    text-align:right
+}
 #errorfield {
     visibility:hidden;
     
     color: red;
+}
+#UserButton {
+    position: absolute;
+    right: 10px;
 }
 /*Sets the header on the "screen" to be a bit bigger.*/
 .largerFont {
