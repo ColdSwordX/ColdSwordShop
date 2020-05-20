@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login Page.aspx.cs" Inherits="ColdSwordShop.Login_Page" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Cart.aspx.cs" Inherits="ColdSwordShop.Cart" %>
 
 <!DOCTYPE html>
 

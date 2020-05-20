@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace ColdSwordShop
 {
-    public partial class Login_Page : System.Web.UI.Page
+    public partial class Cart : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

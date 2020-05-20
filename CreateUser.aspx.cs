@@ -20,19 +20,32 @@ namespace ColdSwordShop
         protected void NewUserButton(object sender, EventArgs e)
         {
 
-            DBConnetorOpen();//opens the database connection.
             string tempUser = CreateUserName.Value;
             string tempPass = CreatePassword.Value;
-            //Creates the user with all the propaties.
-            string cmdstr = "insert into Login (Username, Pass) values ('"+ tempUser +"','" + tempPass + "' )";
-            command = new SqlCommand(cmdstr , conn);
+            try
+            {
+                //Creates the user with all the propaties.
+                string cmdstr = "insert into Login (Username, Pass) values ('" + tempUser + "','" + tempPass + "' )";
+                command = new SqlCommand(cmdstr, conn);
+                DBRunMe();
+                cmdstr = string.Format("insert into PersonInformation (PIID, Fname, Lname, Email, Phone, PostalCode, City, Street, StreetNR)" +
+                    "values((select ID from Login where Username='{0}' and pass='{1}'), '{2}', '{3}','{4}',{5},'{6}','{7}','{8}',{9});", tempUser, tempPass, CreateFName.Value, CreateLName.Value
+                    , CreateEmail.Value, CreatePhone.Value, CreatePostalCode.Value, CreateCity.Value, CreateStreet.Value, CreateStreetNR.Value);
+                command = new SqlCommand(cmdstr, conn);
+                DBRunMe();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            Response.Redirect("Home.aspx");
+        }
+        private void DBRunMe()
+        {
+            DBConnetorOpen();//opens the database connection.
             command.ExecuteNonQuery();
-            cmdstr = string.Format( "insert into PersonInformation (PIID, Fname, Lname, Email, Phone, PostalCode, City, Street, StreetNR)" +
-                "values(select ID from Login where Username='{0}' and pass='{1}', '{2}', '{3}','{4}',{5},'{6}','{7}','{8}',{9});", tempUser, tempPass, CreateFName.Value, CreateLName.Value
-                , CreateEmail.Value, CreatePhone.Value, CreatePostalCode.Value ,CreateCity.Value, CreateStreet.Value, CreateStreetNR.Value);
-            command = new SqlCommand(cmdstr, conn);
-            command.ExecuteNonQuery();
-            DBConnetorClose();
+            DBConnetorClose();//Closes the database connection.
         }
         private void DBConnetorOpen()//opens a connection to the database.
         {

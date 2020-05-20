@@ -11,7 +11,7 @@ namespace ColdSwordShop
 {
 
 
-    public partial class Login_Page
+    public partial class Cart
     {
 
         /// <summary>

@@ -8,22 +8,27 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <%-- Top Navigation menu --%>
-            <ul>
-                <%-- Shop Name --%>
-                <li><a>ColdSword Shop </a></li>
-                
-                 <%--Displays what page you are on in the right top side of the nav bar--%>
-                <li></li>
-            </ul>
+             <%-- Top Navigation menu --%>
+            <div class="navbar">
+                <a href="Home.aspx">Home</a>
+                <div class="dropdown">
+                <button class="dropbtn">Login 
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                    <div class="dropdown-content">
+                    <a href="Login.aspx">Login</a>
+                    <a href="CreateUser.aspx">Create new User</a>
+                    </div>
+                </div>
+            </div>
             <%-- Side Navigation bar --%>
             <div class="sidenav">
-                <a href="Home.aspx">Home</a>
                 <a href="ShopPage.aspx">Shop</a>
-                <a href="#">Somthing</a>
-                <a href="Login.aspx">Login</a>
+                <a href="Cart.aspx">Cart</a>
             </div>
+        <%--Main page--%>
         <div class="main">
+            <%-- Left side of the shop --%>
             <a>
             <asp:Label ID="Label1" Width="500px" runat="server" Text="Label"></asp:Label><br />
             <asp:TextBox ID="TextBox1" Height="100px" Width="500px" runat="server">something else</asp:TextBox>
@@ -44,6 +49,7 @@
             <asp:TextBox ID="TextBox6" Height="100px" Width="500px" runat="server">something else</asp:TextBox>
                 <asp:Image ID="Image6" runat="server" /><br />
             </a>
+            <%-- Right side of the shop --%>
             <b>
             <asp:Label ID="Label5" Width="500px" runat="server" Text="Label"></asp:Label><br />
             <asp:TextBox ID="TextBox7" Height="100px" Width="500px" runat="server">something else</asp:TextBox>
@@ -64,6 +70,11 @@
             <asp:TextBox ID="TextBox12" Height="100px" Width="500px" runat="server">something else</asp:TextBox>
                 <asp:Image ID="Image12" runat="server" /><br />
             </b>
+            <nav>
+                <asp:DropDownList ID="DropDownList1" width="33%" runat="server"></asp:DropDownList>
+                <asp:DropDownList ID="DropDownList2" width="33%" runat="server"></asp:DropDownList>
+                <asp:DropDownList ID="DropDownList3" width="33%" runat="server"></asp:DropDownList>
+            </nav>
         </div>
     </form>
 </body>

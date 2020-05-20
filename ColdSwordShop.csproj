@@ -71,15 +71,22 @@
     <Content Include="App_Data\ColdSwordShopDB_log.ldf">
       <DependentUpon>ColdSwordShopDB.mdf</DependentUpon>
     </Content>
+    <Content Include="Cart.aspx" />
     <Content Include="CreateUser.aspx" />
     <Content Include="Home.aspx" />
-    <Content Include="Login Page.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="ShopPage.aspx" />
     <Content Include="WebshopStyle.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cart.aspx.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cart.aspx.designer.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CreateUser.aspx.cs">
       <DependentUpon>CreateUser.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -95,13 +102,6 @@
       <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
     <Compile Include="InformationClass.cs" />
-    <Compile Include="Login Page.aspx.cs">
-      <DependentUpon>Login Page.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Login Page.aspx.designer.cs">
-      <DependentUpon>Login Page.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

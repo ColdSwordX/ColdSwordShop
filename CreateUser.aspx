@@ -8,20 +8,25 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <ul>
-            <%-- Shop Name --%>
-            <li><a>ColdSword Shop </a></li>
-                
-            <%--Displays what page you are on in the right top side of the nav bar--%>
-            <li><a style="position:absolute; right:10px; ">Login</a></li>
-            </ul>
+             <%-- Top Navigation menu --%>
+            <div class="navbar">
+                <a href="Home.aspx">Home</a>
+                <div class="dropdown">
+                <button class="dropbtn">Login 
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                    <div class="dropdown-content">
+                    <a href="Login.aspx">Login</a>
+                    <a href="CreateUser.aspx">Create new User</a>
+                    </div>
+                </div> 
+            </div>
             <%-- Side Navigation bar --%>
             <div class="sidenav">
-                <a href="Home.aspx">Home</a>
                 <a href="ShopPage.aspx">Shop</a>
-                <a href="#">Somthing</a>
-                <a href="Login.aspx">Login</a>
+                <a href="Cart.aspx">Cart</a>
             </div>
+        <%--Main page--%>
             <div class="centerCreateField">
                 <label>Create User</label><br /><br />
                 <Label ID="CUserNameLabel" runat="server">User Name:</Label>

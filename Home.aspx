@@ -9,19 +9,22 @@
     <body>
         <form id="form1" runat="server">
              <%-- Top Navigation menu --%>
-            <ul>
-                <%-- Shop Name --%>
-                <li><a>ColdSword Shop </a></li>
-                
-                 <%--Displays what page you are on in the right top side of the nav bar--%>
-                <li><a style="position:absolute; right:10px;">Home</a></li>
-            </ul>
+            <div class="navbar">
+                <a href="Home.aspx">Home</a>
+                <div class="dropdown">
+                <button class="dropbtn">Login 
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                    <div class="dropdown-content">
+                    <a href="Login.aspx">Login</a>
+                    <a href="CreateUser.aspx">Create new User</a>
+                    </div>
+                </div> 
+            </div>
             <%-- Side Navigation bar --%>
             <div class="sidenav">
-                <a href="Home.aspx">Home</a>
                 <a href="ShopPage.aspx">Shop</a>
-                <a href="#">Somthing</a>
-                <a href="Login.aspx">Login</a>
+                <a href="Cart.aspx">Cart</a>
             </div>
             <%-- Main Page --%>
             <div class="main">

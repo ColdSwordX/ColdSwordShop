@@ -7,7 +7,7 @@ drop table login
 go
 Create Table Login(
 	ID int Identity(1,1) primary key,
-	Username  char(255) not null,
+	Username  char(255) UNIQUE not null,
 	Pass  char(255) not null,
 	Administrator int default 0
 );
