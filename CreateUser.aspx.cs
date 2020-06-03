@@ -15,7 +15,14 @@ namespace ColdSwordShop
         SqlCommand command;
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (string.IsNullOrEmpty(InformationClass.Username) == true)
+            {
+                UserLoginName.InnerText = "Login";
+            }
+            else
+            {
+                UserLoginName.InnerText = InformationClass.Username;
+            }
         }
         protected void NewUserButton(object sender, EventArgs e)
         {
@@ -39,6 +46,7 @@ namespace ColdSwordShop
 
                 throw;
             }
+            InformationClass.Username = tempUser;
             Response.Redirect("Home.aspx");
         }
         private void DBRunMe()
@@ -58,6 +66,14 @@ namespace ColdSwordShop
         {
             conn.Close();
             conn.Dispose();
+        }
+        private void Logout() //Reset's all the settings of the information class.
+        {
+            InformationClass.Username = "";
+            InformationClass.LoginId = 0;
+            InformationClass.IsAdmin = false;
+            InformationClass.Delete = false;
+            InformationClass.EditThis = false;
         }
     }
 }

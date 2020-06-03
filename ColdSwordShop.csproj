@@ -67,11 +67,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\ColdSwordShopDB.mdf" />
-    <Content Include="App_Data\ColdSwordShopDB_log.ldf">
-      <DependentUpon>ColdSwordShopDB.mdf</DependentUpon>
+    <Content Include="App_Data\ColdSwordShop.mdf" />
+    <Content Include="App_Data\ColdSwordShop_log.ldf">
+      <DependentUpon>ColdSwordShop.mdf</DependentUpon>
     </Content>
     <Content Include="Cart.aspx" />
+    <Content Include="ColdSwordShop.mdf" />
     <Content Include="CreateUser.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="Login.aspx" />

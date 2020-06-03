@@ -10,29 +10,26 @@
         <form id="form1" runat="server">
              <%-- Top Navigation menu --%>
             <div class="navbar">
-                <a href="Home.aspx">Home</a>
+                <b>ColdSword's Shop</b>
                 <div class="dropdown">
-                <button class="dropbtn">Login 
+                <button id="UserLoginName" runat="server" class="dropbtn">Login 
                     <i class="fa fa-caret-down"></i>
                 </button>
                     <div class="dropdown-content">
-                    <a href="Login.aspx">Login</a>
+                    <a id="UserLogin" href="Login.aspx">Login</a>
                     <a href="CreateUser.aspx">Create new User</a>
                     </div>
                 </div> 
             </div>
             <%-- Side Navigation bar --%>
             <div class="sidenav">
+                <a href="Home.aspx">Home</a>
                 <a href="ShopPage.aspx">Shop</a>
-                <a href="Cart.aspx">Cart</a>
+                <a id="cart" href="Cart.aspx">Cart</a>
             </div>
             <%-- Main Page --%>
             <div class="main">
-                <a>AAAAAAAAAAAAaaaaaaaaaaaaaaaaaaa</a>
-                <b>BBBBBBBBBBBbbbbbbbbbbbbbbbbbbB</b>
-
-                
-                <p>This sidenav is always shown.</p>
+                <a>Home Page</a>
             </div>
         </form>
     </body>

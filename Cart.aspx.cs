@@ -11,7 +11,14 @@ namespace ColdSwordShop
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (string.IsNullOrEmpty(InformationClass.Username) == true)
+            {
+                UserLoginName.InnerText = "Login";
+            }
+            else
+            {
+                UserLoginName.InnerText = InformationClass.Username;
+            }
         }
     }
 }

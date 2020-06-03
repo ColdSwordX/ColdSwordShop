@@ -6,7 +6,6 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Data;
-using System.Xml;
 
 namespace ColdSwordShop
 {
@@ -17,15 +16,14 @@ namespace ColdSwordShop
         SqlCommand command;
         protected void Page_Load(object sender, EventArgs e)
         {
-            //DBConnetorOpen();
-            //cmdstr = "Select * from Login";
-            //command = new SqlCommand(cmdstr, conn);
-            //SqlDataReader reader = command.ExecuteReader();
-            //while (reader.Read())
-            //{
-            //    ChangeState((IDataRecord)reader);
-            //}
-            //DBConnetorClose();
+            if (string.IsNullOrEmpty(InformationClass.Username) == true)
+            {
+                UserLoginName.InnerText = "Login";
+            }
+            else
+            {
+                UserLoginName.InnerText = InformationClass.Username;
+            }
         }
         protected void Clicked(object sender, EventArgs e)//Trikker on the Onclicked from Html.
         {
@@ -72,6 +70,7 @@ namespace ColdSwordShop
                 }
                 reader.Close();//close the reader.
                 DBConnetorClose();//close the connection.
+                InformationClass.Username = username.Value;
                 Response.Redirect("Home.aspx");
             }
             else
@@ -104,6 +103,14 @@ namespace ColdSwordShop
         {
             conn.Close();
             conn.Dispose();
+        }
+        private void Logout() //Reset's all the settings of the information class.
+        {
+            InformationClass.Username = "";
+            InformationClass.LoginId = 0;
+            InformationClass.IsAdmin = false;
+            InformationClass.Delete = false;
+            InformationClass.EditThis = false;
         }
     }
 }
