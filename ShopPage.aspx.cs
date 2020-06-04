@@ -21,7 +21,6 @@ namespace ColdSwordShop
             if (!IsPostBack)
             {
                 DBGetCatagory();
-                GetItems(">0",CatagoryList.Text);
                 if (string.IsNullOrEmpty(InformationClass.Username) == true)
                 {
                     UserLoginName.InnerText = "Login";
@@ -32,6 +31,8 @@ namespace ColdSwordShop
                     UserLoginName.InnerText = InformationClass.Username;
                 }
             }
+
+            GetItems(">0", CatagoryList.Text);
         }
         protected void ShearchButton(object sender, EventArgs e)//Find items when the button is pressed
         {
@@ -61,13 +62,13 @@ namespace ColdSwordShop
             Container.Attributes["Class"] = "borderClass";
 
             HtmlGenericControl NameDiv = new HtmlGenericControl("DIV");
-            NameDiv.ID = number.ToString();
+            NameDiv.ID = "name" + number.ToString();
             
             HtmlGenericControl DescriptionDiv = new HtmlGenericControl("DIV");
-            NameDiv.ID = number.ToString();
+            NameDiv.ID = "DescriptionDiv" + number.ToString();
 
             HtmlGenericControl PriceDiv = new HtmlGenericControl("DIV");
-            NameDiv.ID = number.ToString();
+            NameDiv.ID = "PriceDiv" + number.ToString();
 
             Label NameLabel = new Label();
             NameLabel.Text = " Name: "+ ItemName;
@@ -84,6 +85,7 @@ namespace ColdSwordShop
             Button button = new Button();
             button.ID = number + "_Button";
             button.Text = "Get this Item";
+            button.Attributes.Add("OnClick", "AddToCart");
             button.Click += AddToCart;
 
 
@@ -95,28 +97,27 @@ namespace ColdSwordShop
         }
         private void AddToCart(object sender, EventArgs e)
         {
-            string temp = ((Button)sender).Parent.ID;//ID of the div (ItemID nr.)
+            //string temp = ((Button)sender).Parent.ID;//ID of the div (ItemID nr.)
 
             DBConnetorOpen();
             cmdstr = "select OrdreNR from CheckOut where PersonID = " + InformationClass.LoginId;
             command = new SqlCommand(cmdstr, conn);
             SqlDataReader reader = command.ExecuteReader();
-            if (reader == null)
+            if (reader.Depth == 0)
             {
+
                 reader.Close();
-                cmdstr = string.Format("insert into CheckOut values{0} insert into Basket (OrdreID)",InformationClass.LoginId);
+                cmdstr = string.Format("insert into CheckOut values ({0}); insert into Basket (OrdraID) (select OrdraID from CheckOut where PersonI = {0})", InformationClass.LoginId);
+
                 command.ExecuteNonQuery();
+                DBConnetorClose();
+
             }
             else
             {
                 reader.Close();
-
-
             }
-            cmdstr = "update basket ";
-            command = new SqlCommand(cmdstr, conn);
-            command.ExecuteNonQuery();
-            DBConnetorClose();
+            
 
             /* 
             insert into CheckOut 
