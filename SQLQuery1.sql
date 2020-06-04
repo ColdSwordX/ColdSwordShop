@@ -56,7 +56,15 @@ values('Beds');
 insert into Inventory
 values('Strabarry','100' ,'Nice cake with strabarry', 1);
 insert into Inventory
+values('Strabarry','200' ,'Nice cake with strabarry', 1);
+insert into Inventory
+values('Strabarry','300' ,'Nice cake with strabarry', 1);
+insert into Inventory
 values ('1 size bed', '1500', 'Bed for 1 person', 2);
+insert into Inventory
+values ('2 size bed', '2500', 'Bed for 2 person', 2);
+insert into Inventory
+values ('Kingsize', '5000', 'KingSized bed', 2);
 go
 select * from Login
 select * from PersonInformation

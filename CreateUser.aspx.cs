@@ -40,6 +40,7 @@ namespace ColdSwordShop
                     , CreateEmail.Value, CreatePhone.Value, CreatePostalCode.Value, CreateCity.Value, CreateStreet.Value, CreateStreetNR.Value);
                 command = new SqlCommand(cmdstr, conn);
                 DBRunMe();
+
             }
             catch (Exception)
             {

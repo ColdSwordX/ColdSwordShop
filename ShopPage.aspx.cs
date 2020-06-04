@@ -24,7 +24,7 @@ namespace ColdSwordShop
                 if (string.IsNullOrEmpty(InformationClass.Username) == true)
                 {
                     UserLoginName.InnerText = "Login";
-                    
+
                 }
                 else
                 {
@@ -63,7 +63,7 @@ namespace ColdSwordShop
 
             HtmlGenericControl NameDiv = new HtmlGenericControl("DIV");
             NameDiv.ID = "name" + number.ToString();
-            
+
             HtmlGenericControl DescriptionDiv = new HtmlGenericControl("DIV");
             NameDiv.ID = "DescriptionDiv" + number.ToString();
 
@@ -71,7 +71,7 @@ namespace ColdSwordShop
             NameDiv.ID = "PriceDiv" + number.ToString();
 
             Label NameLabel = new Label();
-            NameLabel.Text = " Name: "+ ItemName;
+            NameLabel.Text = " Name: " + ItemName;
             NameDiv.Controls.Add(NameLabel);
 
             Label DescriptionLabel = new Label();
@@ -97,27 +97,35 @@ namespace ColdSwordShop
         }
         private void AddToCart(object sender, EventArgs e)
         {
-            //string temp = ((Button)sender).Parent.ID;//ID of the div (ItemID nr.)
+            string temp = ((Button)sender).Parent.ID;//ID of the div (ItemID nr.)
 
-            DBConnetorOpen();
             cmdstr = "select OrdreNR from CheckOut where PersonID = " + InformationClass.LoginId;
             command = new SqlCommand(cmdstr, conn);
+            DBConnetorOpen();
             SqlDataReader reader = command.ExecuteReader();
             if (reader.Depth == 0)
             {
-
-                reader.Close();
-                cmdstr = string.Format("insert into CheckOut values ({0}); insert into Basket (OrdraID) (select OrdraID from CheckOut where PersonI = {0})", InformationClass.LoginId);
-
-                command.ExecuteNonQuery();
                 DBConnetorClose();
+                reader.Close();
+                cmdstr = string.Format("insert into CheckOut values ({0})", InformationClass.LoginId);
+                command = new SqlCommand(cmdstr, conn);
+                DBRunCommand();
+                // Add the item selected to the Basket
+                cmdstr = string.Format("insert into Basket (OrdreID, ItemID) values((select OrdreNR from CheckOut where PersonID = {1}), {0})", temp, InformationClass.LoginId);
+                command = new SqlCommand(cmdstr, conn);
+                DBRunCommand();
 
             }
             else
             {
+                DBConnetorClose();
                 reader.Close();
+                // Add the item selected to the Basket
+                cmdstr = string.Format("insert into Basket (OrdreID, ItemID) values((select OrdreNR from CheckOut where PersonID = {1}), {0})", temp, InformationClass.LoginId);
+                command = new SqlCommand(cmdstr, conn);
+                DBRunCommand();
             }
-            
+
 
             /* 
             insert into CheckOut 
@@ -173,7 +181,7 @@ namespace ColdSwordShop
                 {
                     while (reader.Read())
                     {
-                        int ID = Convert.ToInt32(reader["ItemID"]); 
+                        int ID = Convert.ToInt32(reader["ItemID"]);
                         string name = Convert.ToString(reader["ItemName"]);
                         string Price = Convert.ToString(reader["ItemPrice"]);
                         string Description = Convert.ToString(reader["ItemDescription"]);
@@ -195,6 +203,20 @@ namespace ColdSwordShop
             conn.Open();
 
             // use the connection after this.
+        }
+        private void DBRunCommand()
+        {
+            try
+            {
+                DBConnetorOpen();
+                command.ExecuteNonQuery();
+                DBConnetorClose();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
         private void DBConnetorClose()//closes the connection to the database.
         {
