@@ -107,6 +107,7 @@ namespace ColdSwordShop
             {
                 DBConnetorClose();
                 reader.Close();
+                //Create the CheckOut for the person.
                 cmdstr = string.Format("insert into CheckOut values ({0})", InformationClass.LoginId);
                 command = new SqlCommand(cmdstr, conn);
                 DBRunCommand();
